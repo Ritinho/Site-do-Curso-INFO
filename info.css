@@ -1,0 +1,529 @@
+* {
+  margin: 0px; /* Remove a margem padrão de todos os elementos */
+  padding: 0px; /* Remove o padding padrão de todos os elementos */
+  box-sizing: border-box; /* Inclui a margem e o padding no cálculo do tamanho total do elemento */
+}
+
+body {
+  overflow-x: hidden; /* Impede a rolagem horizontal */
+  height: 2000px; /* Define a altura do corpo da página */
+  background-repeat: no-repeat; /* Impede a repetição do background */
+  background-size: 100%; /* Ajusta o tamanho do background para cobrir 100% do container */
+}
+
+.background {
+  content: ""; /* Adiciona um conteúdo vazio */
+  background-image: url("../imgs/fundo2.0.jpg"); /* Define a imagem de fundo */
+  background-repeat: no-repeat; /* Impede a repetição do background */
+  background-size: 100%; /* Ajusta o tamanho do background para cobrir 100% do container */
+  background-position: center; /* Centraliza o background */
+  position: absolute; /* Posiciona o background de forma absoluta */
+  top: 0; /* Define a posição superior do background */
+  left: 0; /* Define a posição à esquerda do background */
+  right: 0; /* Define a posição à direita do background */
+  bottom: 0; /* Define a posição inferior do background */
+  opacity: 0.55; /* Define a opacidade do background */
+  z-index: -1; /* Define o controle de sobreposição para o background */
+  background-attachment: fixed; /* Faz com que o background permaneça fixo ao rolar a página */
+}
+
+.navbar {
+  background-color: #ffffff; /* Cor fundo do '.navbar' */
+  padding-top: 15px; /* Espaçamento interno no topo */
+  padding-left: 10px; /* Espaçamento interno */
+  display: flex; /* Estilo dos botões de link */
+  justify-content: space-between; /* Alinha os itens no espaço disponível */
+  width: 100%; /* Largura do '.navbar' */
+  align-items: center; /* Alinha os itens no centro */
+  margin-left: -20px; /* Ajuste o menu conforme necessário */
+  height: 3%; /* Altura do '.navbar' */
+}
+
+.logo img {
+  padding-left: 30px; /* Espaçamento interno à esquerda da logo */
+  height: 2%; /* Ajuste a altura conforme necessário */
+  width: 25%; /* Ajuste a largura conforme necessário */
+}
+
+.nav-links {
+  list-style: none; /* Estilo da lista */
+  padding: 0; /* Espaçamento interno */
+  margin: 0; /* Margem do '.nav-links' */
+  font-family: "Viga", sans-serif; /* Fonte do '.nav-links' */
+  display: flex; /* Estilo dos botões de link */
+  border-radius: 50px; /* Arredonda as bordas dos itens da lista */
+}
+
+.nav-links a {
+  list-style: none; /* Estilo da lista */
+  padding: 0; /* Espaçamento interno */
+  margin: 0; /* Margem do '.nav-links' */
+  font-family: "Viga", sans-serif; /* Fonte do '.nav-links' */
+  display: flex; /* Estilo dos botões de link */
+  border-radius: 10px; /* Arredonda as bordas dos links */
+  padding: 10px 20px; /* Ajuste o padding para expandir a área do link */
+  display: inline-block; /* Exibe os links como blocos inline */
+  position: relative; /* Posição relativa */
+  top: -8px; /* Ajusta a posição vertical dos links */
+}
+
+.nav-links .pgatual a {
+  color: #ff6600; /* Cor do texto */
+  transition: color 0.3s ease; /* Transição suave de cor */
+  font-size: 25px; /* Tamanho da fonte */
+  font-weight: bold; /* Espessura da fonte */
+  position: relative; /* Posição relativa */
+  top: -8px; /* Ajuste vertical do link ativo */
+  font-family: "Viga", sans-serif; /* Fonte do link ativo */
+  text-decoration: none; /* Remove a decoração de texto do link ativo */
+  border-radius: 10px; /* Arredonda as bordas do link ativo */
+  padding: 10px 20px; /* Ajuste o padding para expandir a área do link */
+  display: inline-block; /* Garante que o link tenha espaço para o padding */
+  background-color: rgb(148, 148, 148, 0.1); /* Cor de fundo do link ativo */
+  transition: background-color 0.5s ease-in-out, color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transições suaves para várias propriedades */
+}
+
+/*.nav-links .pgatual a:hover {
+    background-color: rgb(148, 148, 148, 0.3); /* Cor de fundo ao passar o mouse 
+    transition: background-color 0.5s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+*/
+.nav-links .otr-pg a:hover {
+  color: #00ccff; /* Cor do texto */
+  /*background-color: rgb(148, 148, 148); Cor de fundo ao passar o mouse 
+    transition: background-color 0.5s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+*/
+}
+
+.nav-links li {
+  margin-left: -10px; /* Espaço entre os botões */
+}
+
+/* Define o estilo dos links dentro dos itens de lista */
+.nav-links li a:not(.pgatual a) {
+  text-decoration: none; /* Remove a decoração de texto */
+  color: #003399; /* Cor do texto */
+  transition: color 0.3s ease; /* Efeito de transição */
+  font-size: 25px; /* Tamanho da fonte */
+  font-weight: bold; /* Espessura da fonte */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Estilo dos botões do Navbar */
+}
+
+/* Define o estilo do link ao passar o mouse */
+.nav-links li a:hover {
+  color: #00ccff; /* Cor ao passar o mouse */
+}
+
+/* Define o estilo das imagens do slider */
+#ex_slider {
+  max-width: 100%; /* Altura do 'slider img' */
+  width: 100%; /* Largura do '#slider img'*/
+}
+
+/* De '.carrosel' até 'slider img' é são as configurações do slider*/
+
+h4 {
+  font-family: "Poppins", sans-serif; /* Fonte do texto */
+  font-size: 26px; /* Tamanho da fonte */
+  font-weight: normal; /* Peso da fonte */
+  text-align: left; /* Alinhamento do texto */
+  position: relative; /* Posição relativa */
+  left: 78px; /* Ajuste horizontal */
+  width: 70%; /* Largura do elemento */
+}
+
+/* Define o estilo da imagem de início */
+.img-inicio {
+  position: relative; /* Posição relativa */
+  left: -230px; /* Deslocamento horizontal */
+  top: 12px; /* Distância do topo */
+  height: 200px; /* Altura do '.img-inicio' */
+  margin: 0; /* Margem do '.img-inicio' */
+  opacity: 150%; /* Opacidade do '.img-inicio' */
+}
+
+/* Define o estilo do título h1 */
+h1 {
+  text-align: center; /* Alinhamento do texto */
+  color: #003399; /* Cor texto do '.h1' */
+  font-size: 75px; /* Tamanho da fonte do '.h1' */
+  font-family: "Paytone One", sans-serif; /* Fonte do 'h1' */
+  font-weight: bold; /* Espessura da fonte */
+  left: 30px; /* Ajuste horizontal */
+}
+
+.tit {
+  text-align: left; /* Alinhamento do texto */
+  color: #003399; /* Cor do texto */
+  font-size: 90px; /* Tamanho da fonte */
+  font-family: "Paytone One", sans-serif; /* Fonte do texto */
+  font-weight: bold; /* Peso da fonte */
+  position: relative; /* Posição relativa */
+  top: 160px; /* Ajuste vertical */
+}
+
+/* Define o estilo do título h2 */
+h2 {
+  font-family: "Poppins", sans-serif; /* Fonte do 'h2' */
+  color: white; /* Cor texto de '.h2' */
+  margin-left: 122px; /* Margem esquerda */
+  font-size: 40px; /* Tamanho da fonte */
+  display: flex; /* Exibição em flexbox */
+  align-items: center; /* Alinhamento dos itens */
+  padding-left: 100px; /* Padding esquerdo */
+}
+
+#texto2 {
+  max-width: 120%; /* Largura máxima */
+  top: 17px; /* Ajuste vertical */
+  left: 100px; /* Ajuste horizontal */
+}
+
+.fundo {
+  background: #003399; /* Cor de fundo */
+  border-top-right-radius: 1000px; /* Bordas arredondadas no topo direito */
+  border-bottom-right-radius: 1000px; /* Bordas arredondadas na parte inferior direita */
+  width: 60%; /* Largura */
+  height: 25px; /* Altura */
+  padding-top: 28px; /* Padding no topo */
+  padding-bottom: 28px; /* Padding na parte inferior */
+  right: 130px; /* Ajuste horizontal */
+  position: relative; /* Posição relativa */
+}
+
+.intro {
+  background: #ff660059; /* Cor de fundo */
+  border-radius: 1000px; /* Bordas arredondadas */
+  width: 50%; /* Largura */
+  padding-top: 28px; /* Padding no topo */
+  padding-right: 10px; /* Padding à direita */
+  padding-left: 400px; /* Padding à esquerda */
+  display: flex; /* Exibição em flexbox */
+  right: 130px; /* Ajuste horizontal */
+  position: relative; /* Posição relativa */
+  opacity: 95%; /* Opacidade */
+  height: 250px; /* Altura */
+}
+
+.intro h3 {
+  font-size: 17px; /* Tamanho da fonte */
+  margin: 0; /* Margem */
+  opacity: 75%; /* Opacidade */
+  font-family: "Poppins", sans-serif; /* Fonte do texto */
+  right: 200px; /* Ajuste horizontal */
+  position: relative; /* Posição relativa */
+  font-weight: 200px; /* Peso da fonte */
+  top: 30px; /* Ajuste vertical */
+  margin-right: -85px; /* Margem à direita */
+}
+
+/* width do scrollbar */
+::-webkit-scrollbar {
+  width: 5px; /* Largura do scrollbar */
+}
+
+/* Handle do scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #ff6600; /* Cor do handle do scrollbar */
+  border-radius: 10px; /* Bordas arredondadas do handle */
+}
+
+.rodape {
+  background-color: #003399; /* Cor de fundo do rodapé */
+  height: 97px; /* Altura do rodapé */
+  right: 10px; /* Ajuste horizontal */
+  width: 102%; /* Largura do rodapé */
+  position: relative; /* Posição relativa */
+  top: 200px; /* Ajuste vertical */
+  margin: 0px; /* Margem do rodapé */
+  z-index: 2; /* Controle de sobreposição do rodapé */
+}
+
+.linha-vertical {
+  height: 60px; /*Altura da linha*/
+  border-left: 3px solid; /* Adiciona borda esquerda na div como ser fosse uma linha.*/
+  color: #ffffff; /* Cor da linha */
+  position: absolute; /* Posição absoluta */
+  left: 25%; /* Ajuste horizontal */
+  margin: 0; /* Margem */
+  z-index: 5; /* Controle de sobreposição */
+  top: 2336px; /* Ajuste vertical */
+}
+
+.linha-vertical2 {
+  height: 60px; /*Altura da linha*/
+  border-left: 3px solid; /* Adiciona borda esquerda na div como ser fosse uma linha.*/
+  color: #ffffff; /* Cor da linha */
+  position: absolute; /* Posição absoluta */
+  left: 50%; /* Ajuste horizontal */
+  margin: 0; /* Margem */
+  z-index: 5; /* Controle de sobreposição */
+  top: 2336px; /* Ajuste vertical */
+}
+
+.linha-vertical3 {
+  height: 60px; /*Altura da linha*/
+  border-left: 3px solid; /* Adiciona borda esquerda na div como ser fosse uma linha.*/
+  color: #ffffff; /* Cor da linha */
+  position: absolute; /* Posição absoluta */
+  left: 70%; /* Ajuste horizontal */
+  margin: 0; /* Margem */
+  z-index: 5; /* Controle de sobreposição */
+  top: 2336px; /* Ajuste vertical */
+}
+
+.botao-grade {
+  top: 115px; /* Ajuste vertical */
+  background-color: transparent; /* Cor de fundo transparente */
+  font-weight: bold; /* Peso da fonte */
+  width: 300px; /* Largura */
+  position: relative; /* Posição relativa */
+  bottom: 20px; /* Ajuste vertical */
+  color: #5ba7ff; /* Cor do texto */
+  border: 2px solid #5ba7ff; /* Borda */
+  padding: 10px 20px; /* Padding */
+  text-decoration: none; /* Remove a decoração de texto */
+  display: inline-block; /* Exibição como bloco inline */
+  font-size: 28px; /* Tamanho da fonte */
+  margin: 4px 2px; /* Margem */
+  cursor: pointer; /* Cursor de ponteiro */
+  font-family: "Poppins", sans-serif; /* Fonte do texto */
+  border-radius: 43.37px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transições suaves */
+  right: 130px;
+}
+
+.botao-grade:hover {
+  background-color: #5ba7ff; /* Cor de fundo ao passar o mouse */
+  color: white; /* Cor do texto ao passar o mouse */
+  transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+}
+
+.botao-container {
+  text-align: center; /* Alinhamento do texto */
+  align-items: center; /* Alinhamento dos itens */
+}
+
+.texto1 {
+  position: relative; /* Posição relativa */
+  top: 70px; /* Ajuste vertical */
+  left: 70px; /* Ajuste horizontal */
+  color: #ff6600; /* Cor do texto */
+  z-index: 5; /* Controle de sobreposição */
+}
+
+.rodape img {
+  image-resolution: 1500px; /* Resolução da imagem */
+}
+
+.amanda {
+  float: left; /* Posicionamento lateral flutuante */
+  margin-right: 20px; /* Margem à direita */
+  left: 73px; /* Ajuste horizontal */
+  position: relative; /* Posição relativa */
+  top: 15px; /* Ajuste vertical */
+  width: 240px; /* Largura */
+  height: 280px; /* Altura */
+}
+
+.pessoal {
+  top: 160px; /* Ajuste vertical */
+  position: relative; /* Posição relativa */
+}
+
+.pessoal {
+  padding-left: 30px; /* Padding à esquerda */
+  padding-right: 30px; /* Padding à direita */
+  width: 100%; /* Largura */
+  height: 25%; /* Altura */
+}
+
+@media screen and (max-width: 1830px) {
+  .intro h3 {
+    font-size: 15px; /* Tamanho da fonte */
+  }
+
+  h2 {
+    font-size: 35px; /* Tamanho da fonte */
+  }
+}
+
+@media screen and (max-width: 1690px) {
+  h2 {
+    font-size: 30px; /* Tamanho da fonte */
+  }
+
+  h4 {
+    font-size: 20px; /* Tamanho da fonte */
+  }
+
+  .intro {
+    width: 60%; /* Largura */
+  }
+}
+
+@media screen and (max-width: 1470px) {
+  h2 {
+    font-size: 27px; /* Tamanho da fonte */
+  }
+
+  h4 {
+    font-size: 17px; /* Tamanho da fonte */
+  }
+
+  .intro {
+    width: 70%; /* Largura */
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .tit,
+  h1 {
+    font-size: 70px; /* Tamanho da fonte */
+  }
+
+  h2 {
+    font-size: 25px; /* Tamanho da fonte */
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .intro h3 {
+    font-size: 15px; /* Tamanho da fonte */
+  }
+
+  h2 {
+    font-size: 23px; /* Tamanho da fonte */
+  }
+
+  .intro {
+    width: 80%; /* Largura */
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  h2 {
+    font-size: 20px; /* Tamanho da fonte */
+  }
+
+  .logo img {
+    padding-left: 30px; /* Padding à esquerda */
+    height: auto; /* Altura */
+    width: 133px; /* Largura */
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .tit,
+  h1 {
+    font-size: 65px; /* Tamanho da fonte */
+  }
+
+  h2 {
+    font-size: 18px; /* Tamanho da fonte */
+  }
+
+  .intro {
+    width: 90%; /* Largura */
+  }
+
+  h4 {
+    font-size: 16px; /* Tamanho da fonte */
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .intro {
+    width: 100%; /* Largura */
+  }
+
+  h2 {
+    font-size: 16px; /* Tamanho da fonte */
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .intro {
+    width: 100%; /* Largura */
+  }
+
+  h2 {
+    font-size: 14px; /* Tamanho da fonte */
+  }
+
+  .intro h3 {
+    font-size: 12px; /* Tamanho da fonte */
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .intro {
+    width: 110%; /* Largura */
+  }
+
+  h2 {
+    padding-left: 50px; /* Padding à esquerda */
+  }
+
+  h4 {
+    font-size: 13px; /* Tamanho da fonte */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nav-links {
+    display: none; /* Esconde os links de navegação */
+  }
+
+  .img-inicio {
+    max-width: 70%; /* Largura máxima */
+    height: 70%; /* Ajuste da altura */
+  }
+
+  .tit,
+  h1 {
+    font-size: 38px; /* Tamanho da fonte */
+    left: 2%; /* Ajuste horizontal */
+  }
+
+  h2 {
+    font-size: 15px; /* Tamanho da fonte */
+  }
+
+  .intro h3 {
+    font-size: 12px; /* Tamanho da fonte */
+    top: 5px; /* Ajuste vertical */
+  }
+
+  .intro {
+    width: 145%; /* Largura */
+    height: 270px; /* Ajuste da altura */
+    border-radius: 0%; /* Ajuste do border-radius */
+  }
+
+  .fundo {
+    width: 90%; /* Largura */
+  }
+
+  h4 {
+    padding-top: 30px; /* Padding à esquerda superior */
+    left: 50px; /* Ajuste horizontal */
+  }
+
+  .amanda {
+    width: 330px; /* Largura */
+    height: auto; /* Altura */
+    left: 10%; /* Ajuste horizontal */
+  }
+
+  #texto2 {
+    left: 11%; /* Ajuste horizontal */
+    padding-top: 400px; /* Padding à esquerda superior */
+  }
+
+  .rodape {
+    height: 70px; /* Ajuste da altura */
+  }
+}
